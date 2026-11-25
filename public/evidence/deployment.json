@@ -12,21 +12,21 @@
       "block": 63558296,
       "gasUsed": 4048108,
       "feeEth": "0.0000253340659478",
-      "finalized": false,
+      "finalized": true,
       "l1FeeAvailable": true
     },
     "funding": {
       "block": 63558963,
       "gasUsed": 223448,
       "feeEth": "0.000001402300786032",
-      "finalized": false,
+      "finalized": true,
       "l1FeeAvailable": true
     },
     "settlement": {
       "block": 63560003,
       "gasUsed": 491153,
       "feeEth": "0.000003092412782036",
-      "finalized": false,
+      "finalized": true,
       "l1FeeAvailable": true
     }
   },

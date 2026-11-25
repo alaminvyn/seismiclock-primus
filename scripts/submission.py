@@ -1,5 +1,7 @@
 """Render the submission from the verified deployment manifest."""
 from pathlib import Path
+from io import BytesIO
+from PIL import Image as RasterImage
 from xml.sax.saxutils import escape
 import json
 from reportlab.lib import colors
@@ -9,6 +11,7 @@ from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, S
 
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root / "public/evidence/deployment.json").read_text())
+manifest.setdefault("repository", "https://github.com/alaminvyn/seismiclock-primus")
 ready = all(manifest.get(key) for key in ("escrow","verifier","deploymentTx","fundingTx","settlementTx"))
 output = root / "output/pdf"
 output.mkdir(parents=True, exist_ok=True)
@@ -79,7 +82,7 @@ if ready:
     story += [
         PageBreak(), para("BASE SEPOLIA TRANSACTION RECORD","label"),
         para("Verified contracts and receipts","heading"),
-        para("Both project contracts have exact source matches on Sourcify. The explorer links identify the successful deployment, deposit and payout."),
+        para("Both project contracts have exact source matches on Sourcify. The explorer links identify the successful deployment, deposit and payout. " + ("All three receipts reached Base Sepolia finality." if all(item.get("finalized") for item in manifest.get("receipts", {}).values()) else "The receipt manifest reports network finality separately.")),
     ]
     explorer = "https://sepolia.basescan.org"
     keys = [("Escrow","address","escrow"),("Project verifier","address","verifier"),
@@ -99,8 +102,16 @@ if any(path.exists() for path in screenshots):
     story += [PageBreak(),para("DASHBOARD","label"),para("Reviewer interface","heading")]
     for image in screenshots:
         if not image.exists(): continue
-        picture = Image(str(image))
-        factor = min(6.7*inch/picture.imageWidth,4*inch/picture.imageHeight)
+        if image.name.endswith("mobile.png"):
+            with RasterImage.open(image) as screen:
+                crop = screen.crop((0, 0, screen.width, min(screen.height, 844)))
+                capture = BytesIO()
+                crop.save(capture, format="PNG")
+                capture.seek(0)
+            picture = Image(capture)
+        else:
+            picture = Image(str(image))
+        factor = min(6.7*inch/picture.imageWidth,3.65*inch/picture.imageHeight)
         picture.drawWidth,picture.drawHeight=picture.imageWidth*factor,picture.imageHeight*factor
         story += [picture,Spacer(1,8)]
 name = "seismiclock-submission.pdf" if ready and manifest.get("website") else "seismiclock-submission-draft.pdf"

@@ -29,3 +29,11 @@ The escrow released 0.0001 test ETH. Before settlement, read-only calls accepted
 
 - [Desktop at 1920 px](output/screenshots/dashboard-desktop.png)
 - [Mobile at 390 px](output/screenshots/dashboard-mobile.png)
+
+## Project links
+
+- [Public GitHub repository](https://github.com/alaminvyn/seismiclock-primus)
+- [Security and limitations](SECURITY.md)
+- [Base Sepolia test and fee records](DEPLOYMENT.md)
+
+The deployment, funding and settlement receipts reached Base Sepolia finality. The three transactions used 4,762,709 gas and incurred 0.000029828779515868 test ETH in network fees, including reported L1 data fees. The 0.0001 test ETH principal was released to the designated beneficiary.
