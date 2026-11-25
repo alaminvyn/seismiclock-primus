@@ -32,6 +32,7 @@ The escrow released 0.0001 test ETH. Before settlement, read-only calls accepted
 
 ## Project links
 
+- [Live production dashboard](https://seismiclock-primus.vercel.app/)
 - [Public GitHub repository](https://github.com/alaminvyn/seismiclock-primus)
 - [Security and limitations](SECURITY.md)
 - [Base Sepolia test and fee records](DEPLOYMENT.md)

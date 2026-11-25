@@ -51,5 +51,7 @@
     "escrow": "exact_match",
     "verifier": "exact_match",
     "service": "Sourcify"
-  }
+  },
+  "website": "https://seismiclock-primus.vercel.app/",
+  "repository": "https://github.com/alaminvyn/seismiclock-primus"
 }
