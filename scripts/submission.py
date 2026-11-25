@@ -3,7 +3,6 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 import json
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
@@ -77,10 +76,20 @@ story = [
     para("Run pnpm compile, pnpm test and pnpm build from the repository. To issue a fresh proof, use the Core SDK with an authorized Primus application in the local proof runner and supply the exact escrow and beneficiary."),
 ]
 if ready:
+    story += [
+        PageBreak(), para("BASE SEPOLIA TRANSACTION RECORD","label"),
+        para("Verified contracts and receipts","heading"),
+        para("Both project contracts have exact source matches on Sourcify. The explorer links identify the successful deployment, deposit and payout."),
+    ]
     explorer = "https://sepolia.basescan.org"
     keys = [("Escrow","address","escrow"),("Project verifier","address","verifier"),
             ("Deployment","tx","deploymentTx"),("Funding","tx","fundingTx"),("Settlement","tx","settlementTx")]
     story.append(grid([(label,external(f"{explorer}/{kind}/{manifest[key]}",manifest[key])) for label,kind,key in keys]))
+    story += [
+        para("Recorded checks","heading"),
+        para(f"At block {manifest.get('checksBeforeSettlement',{}).get('block','pending')}, the verifier accepted both genuine proofs, rejected modified earthquake data, and the escrow accepted the bound proof while rejecting the original gate proof for the incorrect beneficiary."),
+        para(f"At block {manifest.get('duplicateAfterSettlement',{}).get('block','pending')}, a repeat settlement reverted. The payout released the full 0.0001 test ETH principal."),
+    ]
 else:
     story.append(para("Public URLs and transaction receipts will be added after their verification."))
 for key,label in (("repository","Public GitHub repository"),("website","Production Vercel site")):
