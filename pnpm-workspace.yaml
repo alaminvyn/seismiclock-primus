@@ -1,0 +1,4 @@
+packageExtensions:
+  '@primuslabs/zktls-core-sdk@0.3.9':
+    dependencies:
+      tslib: 2.9.1

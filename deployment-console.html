@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SeismicLock local deployment console</title></head>
+<body>
+<main class="shell" style="padding-block:40px;max-width:760px">
+  <section class="panel">
+    <span class="overline">Local operations · Base Sepolia</span>
+    <h1 style="font-size:34px">SeismicLock deployment</h1>
+    <p>Connect the intended test wallet. Its address will be the fixed funder and beneficiary. Review the exact transaction in the wallet before confirming.</p>
+    <div class="controls"><button class="button secondary" id="connect">Connect test wallet</button><button class="button primary" id="deploy" disabled>Deploy frozen verifier and escrow</button></div>
+    <pre id="log" role="status" aria-live="polite">Waiting for test wallet.</pre>
+  </section>
+</main>
+<script type="module" src="/src/deployment.ts"></script>
+</body>
+</html>

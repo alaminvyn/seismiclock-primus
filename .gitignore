@@ -1,0 +1,8 @@
+/.gate/
+node_modules/
+.pnpm-store/
+dist/
+.env*
+!.env.example
+artifacts/
+/output/pdf/*-draft.pdf

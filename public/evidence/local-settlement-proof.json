@@ -1,0 +1,64 @@
+{
+  "recipient": "0xffcf8fdee72ac11b5c542428b35eef5769c409f0",
+  "request": {
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2023-02-06T01%3A17%3A30&endtime=2023-02-06T01%3A17%3A40&minmagnitude=7&limit=1",
+    "header": "",
+    "method": "GET",
+    "body": ""
+  },
+  "reponseResolve": [
+    {
+      "keyName": "eventId",
+      "parseType": "",
+      "parsePath": "$.features[0].id"
+    },
+    {
+      "keyName": "magnitude",
+      "parseType": "",
+      "parsePath": "$.features[0].properties.mag"
+    },
+    {
+      "keyName": "eventTime",
+      "parseType": "",
+      "parsePath": "$.features[0].properties.time"
+    },
+    {
+      "keyName": "updated",
+      "parseType": "",
+      "parsePath": "$.features[0].properties.updated"
+    },
+    {
+      "keyName": "eventType",
+      "parseType": "",
+      "parsePath": "$.features[0].properties.type"
+    },
+    {
+      "keyName": "status",
+      "parseType": "",
+      "parsePath": "$.features[0].properties.status"
+    },
+    {
+      "keyName": "longitude",
+      "parseType": "",
+      "parsePath": "$.features[0].geometry.coordinates[0]"
+    },
+    {
+      "keyName": "latitude",
+      "parseType": "",
+      "parsePath": "$.features[0].geometry.coordinates[1]"
+    }
+  ],
+  "data": "{\"eventId\":\"us6000jllz\",\"eventTime\":\"1675646254342\",\"eventType\":\"earthquake\",\"latitude\":\"37.2256\",\"longitude\":\"37.0143\",\"magnitude\":\"7.8\",\"status\":\"reviewed\",\"updated\":\"1776123150032\"}",
+  "attConditions": "[{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].id\",\"reveal_id\":\"eventId\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].properties.mag\",\"reveal_id\":\"magnitude\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].properties.time\",\"reveal_id\":\"eventTime\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].properties.updated\",\"reveal_id\":\"updated\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].properties.type\",\"reveal_id\":\"eventType\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].properties.status\",\"reveal_id\":\"status\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].geometry.coordinates[0]\",\"reveal_id\":\"longitude\"},{\"op\":\"REVEAL_STRING\",\"field\":\"$.features[0].geometry.coordinates[1]\",\"reveal_id\":\"latitude\"}]",
+  "timestamp": 1795632905715,
+  "additionParams": "{\"algorithmType\":\"proxytls\",\"scope\":\"seismiclock:v1:84532:0x7e664541678c4997ad9dbdb9978c6e2b5a9445be:us6000jllz\"}",
+  "attestors": [
+    {
+      "attestorAddr": "0x5ed3176045f68617b0958a61ac1868875c98c14d",
+      "url": "https://primuslabs.xyz"
+    }
+  ],
+  "signatures": [
+    "0xfb1227d215bc1cfd8870f55f559c82998d12da31aa0cc89f712ec707990a70344583fa96690a4a6405306e32676f9b775652485e1cbbd6230fe94b38e5fad9af1b"
+  ]
+}
