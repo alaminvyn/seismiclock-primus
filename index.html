@@ -4,32 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="SeismicLock traces a reviewed USGS earthquake from a Primus zkTLS attestation to a Base Sepolia escrow.">
-<meta property="og:title" content="SeismicLock · Proof-powered emergency settlement">
+<meta property="og:title" content="SeismicLock Historical Demo">
 <meta property="og:image" content="/brand/social.png">
 <meta name="theme-color" content="#121416">
-<link rel="icon" type="image/svg+xml" href="/brand/seismiclock.svg">
-<title>SeismicLock — Historical settlement</title>
+<link rel="icon" type="image/x-icon" href="/brand/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+<title>SeismicLock Historical Demo</title>
 </head>
 <body>
 <header class="top"><div class="shell top-inner">
-  <a class="identity" href="./"><img src="/brand/seismiclock.svg" alt="" width="37" height="37"><span>Seismic<span>Lock</span></span></a>
+  <a class="identity" href="./"><img src="/brand/seismiclock.svg" alt="" width="42" height="42"><span>Seismic<span>Lock</span></span></a>
   <div class="top-actions"><span class="network"><i></i> Base Sepolia</span><button id="wallet" class="button secondary">Connect wallet</button></div>
 </div></header>
 <main class="shell">
-  <section class="intro" aria-labelledby="title"><div><span class="overline">Historical earthquake exercise</span><h1 id="title">Proof-powered emergency<br class="desktop"> settlement.</h1><p>Follow one reviewed USGS earthquake through a Primus zkTLS attestation to a conditional release of Base Sepolia test funds.</p></div><div class="exercise"><span class="small">ENVIRONMENT</span><strong>Testnet demonstration</strong><span>Historical catalog event · no live dispatch</span></div></section>
+  <section class="intro" aria-labelledby="title"><div><span class="overline">Historical earthquake exercise</span><h1 id="title">Proof-powered emergency settlement</h1><p>Follow one reviewed USGS earthquake through a Primus zkTLS attestation to a conditional release of Base Sepolia test funds.</p></div><div class="exercise"><strong>Historical testnet demo</strong><span>No live emergency dispatch</span></div></section>
   <div class="grid">
     <section class="panel event" aria-labelledby="event-title">
       <div class="panel-head"><div><span class="overline">USGS earthquake catalog</span><h2 id="event-title">Pazarcık earthquake</h2></div><a class="white-link" href="https://earthquake.usgs.gov/earthquakes/eventpage/us6000jllz" target="_blank" rel="noreferrer">USGS record</a></div>
       <div class="map" aria-label="Geographic policy view showing the epicenter at 37.2256 degrees north and 37.0143 degrees east.">
-        <svg viewBox="0 0 600 250" role="img" aria-labelledby="plot-title" preserveAspectRatio="xMidYMid slice">
+        <svg viewBox="0 0 600 250" role="img" aria-labelledby="plot-title" preserveAspectRatio="xMidYMid meet">
           <title id="plot-title">Longitude and latitude grid, epicenter and settlement boundary</title>
           <defs><pattern id="grid" width="27" height="24" patternUnits="userSpaceOnUse"><path d="M27 0H0v24" fill="none" stroke="#374044" stroke-width="0.7"/></pattern><radialGradient id="area"><stop stop-color="#dba956" stop-opacity=".23"/><stop offset="1" stop-color="#dba956" stop-opacity="0"/></radialGradient></defs>
           <rect width="600" height="250" fill="#171e22"/><rect width="600" height="250" fill="url(#grid)"/>
           <rect x="155" y="56" width="290" height="138" fill="#d6a052" fill-opacity=".08" stroke="#a88149" stroke-dasharray="5 6"/>
           <circle cx="302.07" cy="162.87" r="105" fill="url(#area)"/><g fill="none" stroke="#a88149" opacity=".66"><circle cx="302.07" cy="162.87" r="22"/><circle cx="302.07" cy="162.87" r="43"/><circle cx="302.07" cy="162.87" r="67" stroke-dasharray="4 4"/></g>
           <path d="M302 155v16m-8-8h16M311 154l29-29h50" stroke="#f1c574" fill="none"/><circle cx="302.07" cy="162.87" r="4" fill="#ffd48d"/>
-          <g fill="#b7bdba" font-family="monospace" font-size="11"><text x="155" y="215">36° E</text><text x="405" y="215">38° E</text><text x="91" y="61">38° N</text><text x="91" y="198">37° N</text></g>
-          <text x="346" y="117" fill="#f1c574" font-family="monospace" font-size="12">EPICENTER</text>
+          <g fill="#b7bdba" font-family="monospace" font-size="14"><text x="155" y="215">36° E</text><text x="405" y="215">38° E</text><text x="91" y="61">38° N</text><text x="91" y="198">37° N</text></g>
+          <text x="346" y="117" fill="#f1c574" font-family="monospace" font-size="15">EPICENTER</text>
         </svg>
         <div class="plot-caption"><span>37.2256° N · 37.0143° E</span><span>Catalog coordinates</span></div>
       </div>
@@ -37,13 +38,13 @@
     </section>
     <section class="panel escrow" aria-labelledby="escrow-title">
       <div class="panel-head"><div><span class="overline">Base Sepolia · 84532</span><h2 id="escrow-title">Emergency escrow</h2></div><span id="state" class="status">Deployment pending</span></div>
-      <div class="amount"><span>Available escrow balance</span><strong id="balance">— <small>ETH</small></strong><span>Fixed test principal · 0.0001 ETH</span></div>
-      <dl class="policy"><div><dt>Minimum magnitude</dt><dd>7.5 M</dd></div><div><dt>Coverage bounds</dt><dd>37–38° N, 36–38° E</dd></div><div><dt>Beneficiary</dt><dd id="beneficiary">Pending</dd></div><div><dt>Attestation age</dt><dd>30 minutes maximum</dd></div><div><dt>Verifier</dt><dd>Project-operated</dd></div></dl>
+      <div class="amount"><span>Available escrow balance</span><strong id="balance">Pending</strong><span>Fixed test principal · 0.0001 ETH</span></div>
+      <dl class="policy"><div><dt>Minimum magnitude</dt><dd>7.5 M</dd></div><div><dt>Coverage bounds</dt><dd>37° to 38° N, 36° to 38° E</dd></div><div><dt>Beneficiary</dt><dd id="beneficiary">Pending</dd></div><div><dt>Attestation age</dt><dd>30 minutes maximum</dd></div><div><dt>Verifier</dt><dd>Project-operated</dd></div></dl>
       <div id="chain-links" class="evidence-links"></div>
     </section>
     <section class="panel pipeline" aria-labelledby="pipeline-title">
       <div class="panel-head"><div><span class="overline">Verification pipeline</span><h2 id="pipeline-title">From event to release</h2></div></div>
-      <ol class="steps"><li><span class="step-icon">01</span><div><strong>USGS response</strong><span>Reviewed event from the earthquake catalog</span></div></li><li><span class="step-icon">02</span><div><strong>Primus zkTLS signature</strong><span>Authentic public-data attestation preserved</span></div></li><li><span class="step-icon">03</span><div><strong>Solidity policy</strong><span>Source, magnitude, boundary, beneficiary and freshness</span></div></li><li><span class="step-icon">04</span><div><strong>Base Sepolia settlement</strong><span id="pipeline-settlement">Receipt pending deployment</span></div></li></ol>
+      <ol class="steps"><li><span class="step-icon" aria-hidden="true"></span><div><strong>USGS response</strong><span>Reviewed event from the earthquake catalog</span></div></li><li><span class="step-icon" aria-hidden="true"></span><div><strong>Primus zkTLS signature</strong><span>Authentic public-data attestation preserved</span></div></li><li><span class="step-icon" aria-hidden="true"></span><div><strong>Solidity policy</strong><span>Source, magnitude, boundary, beneficiary and freshness</span></div></li><li><span class="step-icon" aria-hidden="true"></span><div><strong>Base Sepolia settlement</strong><span id="pipeline-settlement">Receipt pending deployment</span></div></li></ol>
     </section>
     <section class="panel inspect" aria-labelledby="proof-title">
       <div class="panel-head"><div><span class="overline">Proof inspection</span><h2 id="proof-title">Attestation console</h2></div></div>
@@ -57,7 +58,7 @@
     </section>
   </div>
 </main>
-<footer class="shell">SeismicLock <span>Primus zkTLS · Historical Base Sepolia demonstration</span></footer>
+<footer class="shell">SeismicLock <span>Historical Demo · Primus zkTLS on Base Sepolia</span></footer>
 <script type="module" src="/src/app.ts"></script>
 </body>
 </html>

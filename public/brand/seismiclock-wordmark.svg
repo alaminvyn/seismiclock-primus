@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 64" role="img" aria-labelledby="name">
+  <title id="name">SeismicLock</title>
+  <path fill="#AD783B" d="M7 13 35 6 30 20 23 25 20 36 7 40Z"/>
+  <path fill="#F3BD72" d="m41 7 16 9v32l-31 9 5-16 9-7 3-10-5-4z"/>
+  <path fill="#D69A53" d="M7 45 23 40l-5 17-11-6z"/>
+  <path fill="#121416" d="m33 21 12 10-11 12-12-10z"/>
+  <path fill="#F8CF92" d="m33 27 6 5-5 6-6-5z"/>
+  <path fill="#AD783B" d="m42 46 15-4v6l-17 5z"/>
+  <text x="73" y="45" font-family="Avenir Next,Arial,sans-serif" font-size="37" font-weight="700" letter-spacing="-1.4" fill="#F3EFE7">Seismic<tspan fill="#F3BD72">Lock</tspan></text>
+</svg>

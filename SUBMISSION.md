@@ -24,3 +24,8 @@ The project integrates the Enterprise Core SDK, explicit JSONPath extraction, si
 | Settlement | [Explorer receipt](https://sepolia.basescan.org/tx/0x4eb0184c5eb16a6c640d466a26b65712e393084ef6e5b619a945d089ebd3c66f) |
 
 The escrow released 0.0001 test ETH. Before settlement, read-only calls accepted the fresh bound proof and rejected a magnitude change and the authentic gate proof's mismatched beneficiary. After settlement, a read-only call rejected another submission. The [live transaction and verification manifest](public/evidence/deployment.json) links the evidence and reports chain finality separately from successful receipt status.
+
+## Dashboard captures
+
+- [Desktop at 1920 px](output/screenshots/dashboard-desktop.png)
+- [Mobile at 390 px](output/screenshots/dashboard-mobile.png)

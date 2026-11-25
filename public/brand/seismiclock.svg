@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
- <path d="M512 101 864 304v416L512 923 160 720V304Z" stroke="#e9b560" stroke-width="46" stroke-linejoin="round"/>
- <path d="M234 530h132l70-174 94 306 74-192 42 60h144" stroke="#ffc975" stroke-width="43" stroke-linecap="round" stroke-linejoin="round"/>
- <path d="M512 166 808 337M216 687l296 171" stroke="#e9b560" stroke-opacity=".52" stroke-width="13" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="name">
+  <title id="name">SeismicLock fault and verification mark</title>
+  <path fill="#AD783B" d="M7 13 35 6 30 20 23 25 20 36 7 40Z"/>
+  <path fill="#F3BD72" d="m41 7 16 9v32l-31 9 5-16 9-7 3-10-5-4z"/>
+  <path fill="#D69A53" d="M7 45 23 40l-5 17-11-6z"/>
+  <path fill="#121416" d="m33 21 12 10-11 12-12-10z"/>
+  <path fill="#F8CF92" d="m33 27 6 5-5 6-6-5z"/>
+  <path fill="#AD783B" d="m42 46 15-4v6l-17 5z"/>
 </svg>

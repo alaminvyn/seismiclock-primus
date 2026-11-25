@@ -10,3 +10,5 @@
 - Transfer failure rollback, reentrant settlement rejection, unauthorized access, expiry refund and terminal states.
 
 TypeScript and the Vite production build passed. Desktop and 400 px mobile layout were visually inspected in Brave, and the signed proof disclosure was opened successfully. Production dependency audit reported no known vulnerabilities. Testnet post-deployment calls independently confirmed authentic verifier acceptance, tampered signature rejection, authentic gate proof rejection by beneficiary, valid policy preview and duplicate-settlement rejection. See the [evidence manifest](public/evidence/deployment.json) for the actual blocks and receipt status.
+
+The refined browser build passed layout checks at 1920, 1440, 1280, 768 and 390 CSS pixels with no detected clipping or horizontal overflow. The browser loaded the settled Base Sepolia state, opened the proof inspector and replayed the recorded pre-settlement checks.

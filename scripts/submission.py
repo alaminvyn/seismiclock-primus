@@ -94,7 +94,7 @@ else:
     story.append(para("Public URLs and transaction receipts will be added after their verification."))
 for key,label in (("repository","Public GitHub repository"),("website","Production Vercel site")):
     if manifest.get(key): story.append(para(external(manifest[key],label)))
-screenshots = [root / "public/brand" / file for file in ("dashboard-desktop.png","dashboard-mobile.png")]
+screenshots = [root / "output/screenshots" / file for file in ("dashboard-desktop.png","dashboard-mobile.png")]
 if any(path.exists() for path in screenshots):
     story += [PageBreak(),para("DASHBOARD","label"),para("Reviewer interface","heading")]
     for image in screenshots:
