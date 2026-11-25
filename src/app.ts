@@ -11,7 +11,7 @@ const rpc = createPublicClient({chain:baseSepolia,transport:fallback([http(impor
 const $ = <T extends HTMLElement=HTMLElement>(id:string) => document.getElementById(id) as T;
 const escrowAbi = escrowArtifact.abi as Abi;
 const verifierAbi = verifierArtifact.abi as Abi;
-const explorer='https://sepolia.basescan.org';
+const explorer='https://base-sepolia.blockscout.com';
 const principal=100_000_000_000_000n;
 
 type Attestation={

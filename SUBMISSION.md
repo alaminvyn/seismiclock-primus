@@ -17,11 +17,11 @@ The project integrates the Enterprise Core SDK, explicit JSONPath extraction, si
 
 | Item | Evidence |
 |---|---|
-| Project-operated verifier | [Sourcify exact match](https://sourcify.dev/server/v2/contract/84532/0xebD80C84e4Ae5433D48a6C5b85aAa5a2cC2d8e30) |
-| Escrow | [Sourcify exact match](https://sourcify.dev/server/v2/contract/84532/0xaceD02D1C2547cBcaB1d20E608C5eC65C58EBBd1) |
-| Deployment | [Explorer receipt](https://sepolia.basescan.org/tx/0xd2f688edcf8e4bda1b128e4a14a5c6310325d4151835a653e6c7a78a92a97b76) |
-| Funding | [Explorer receipt](https://sepolia.basescan.org/tx/0x13016fe227215726c8f356982e165e210291f46ccad4911bfc860a8df2bfd174) |
-| Settlement | [Explorer receipt](https://sepolia.basescan.org/tx/0x4eb0184c5eb16a6c640d466a26b65712e393084ef6e5b619a945d089ebd3c66f) |
+| Project-operated verifier | [Blockscout](https://base-sepolia.blockscout.com/address/0xebD80C84e4Ae5433D48a6C5b85aAa5a2cC2d8e30) · [Sourcify exact match](https://sourcify.dev/server/v2/contract/84532/0xebD80C84e4Ae5433D48a6C5b85aAa5a2cC2d8e30) |
+| Escrow | [Blockscout](https://base-sepolia.blockscout.com/address/0xaceD02D1C2547cBcaB1d20E608C5eC65C58EBBd1) · [Sourcify exact match](https://sourcify.dev/server/v2/contract/84532/0xaceD02D1C2547cBcaB1d20E608C5eC65C58EBBd1) |
+| Deployment | [Blockscout receipt](https://base-sepolia.blockscout.com/tx/0xd2f688edcf8e4bda1b128e4a14a5c6310325d4151835a653e6c7a78a92a97b76) |
+| Funding | [Blockscout receipt](https://base-sepolia.blockscout.com/tx/0x13016fe227215726c8f356982e165e210291f46ccad4911bfc860a8df2bfd174) |
+| Settlement | [Blockscout receipt](https://base-sepolia.blockscout.com/tx/0x4eb0184c5eb16a6c640d466a26b65712e393084ef6e5b619a945d089ebd3c66f) |
 
 The escrow released 0.0001 test ETH. Before settlement, read-only calls accepted the fresh bound proof and rejected a magnitude change and the authentic gate proof's mismatched beneficiary. After settlement, a read-only call rejected another submission. The [live transaction and verification manifest](public/evidence/deployment.json) links the evidence and reports chain finality separately from successful receipt status.
 

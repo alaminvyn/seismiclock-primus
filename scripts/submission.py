@@ -82,9 +82,9 @@ if ready:
     story += [
         PageBreak(), para("BASE SEPOLIA TRANSACTION RECORD","label"),
         para("Verified contracts and receipts","heading"),
-        para("Both project contracts have exact source matches on Sourcify. The explorer links identify the successful deployment, deposit and payout. " + ("All three receipts reached Base Sepolia finality." if all(item.get("finalized") for item in manifest.get("receipts", {}).values()) else "The receipt manifest reports network finality separately.")),
+        para("Both project contracts have exact source matches on Sourcify. The Blockscout links identify the successful deployment, deposit and payout. " + ("All three receipts reached Base Sepolia finality." if all(item.get("finalized") for item in manifest.get("receipts", {}).values()) else "The receipt manifest reports network finality separately.")),
     ]
-    explorer = "https://sepolia.basescan.org"
+    explorer = "https://base-sepolia.blockscout.com"
     keys = [("Escrow","address","escrow"),("Project verifier","address","verifier"),
             ("Deployment","tx","deploymentTx"),("Funding","tx","fundingTx"),("Settlement","tx","settlementTx")]
     story.append(grid([(label,external(f"{explorer}/{kind}/{manifest[key]}",manifest[key])) for label,kind,key in keys]))
@@ -99,7 +99,7 @@ for key,label in (("repository","Public GitHub repository"),("website","Producti
     if manifest.get(key): story.append(para(external(manifest[key],label)))
 screenshots = [root / "output/screenshots" / file for file in ("dashboard-desktop.png","dashboard-mobile.png")]
 if any(path.exists() for path in screenshots):
-    story += [PageBreak(),para("DASHBOARD","label"),para("Reviewer interface","heading")]
+    story += [PageBreak(),para("DASHBOARD","label"),para("Reviewer interface","heading"),para("Powered by Primus zkTLS on Base Sepolia. The dashboard shows a historical testnet demonstration with no live emergency dispatch.")]
     for image in screenshots:
         if not image.exists(): continue
         if image.name.endswith("mobile.png"):
